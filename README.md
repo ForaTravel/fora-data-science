@@ -29,7 +29,8 @@ The goal: any data question asked to an assistant at Fora should start from this
 1. **Pull first.** `git pull` so you're working on the latest definitions.
 2. **Branch.** `git checkout -b <your-name>/<short-description>`.
 3. **Pick the right home.**
-   - A finished analysis → `analyses/<collection>/YYYY-MM-<slug>/README.md` (copy `templates/analysis.md`). Collections: marketing, strategy, business-units, product, finance, product-operations, partners, leadership, international, other.
+   - A Hex project → add a row to `scripts/hex_projects.csv` and run `python3 scripts/export_hex.py <project_id>` (needs `HEX_API_TOKEN`). It saves the project as `analyses/<collection>/<slug>/<slug>.hex.yaml` with a starter README. Exports contain logic only, never query results.
+   - Any other finished analysis → `analyses/<collection>/YYYY-MM-<slug>/README.md` (copy `templates/analysis.md`). Collections: marketing, strategy, business-units, product, finance, product-operations, partners, leadership, international, other.
    - A metric definition → `context/metrics/<metric-name>.md` (copy `templates/metric.md`).
    - A table's grain, keys, or gotchas → `context/tables/<schema>.<table>.md`.
    - A business term → a row in `context/glossary.md`.

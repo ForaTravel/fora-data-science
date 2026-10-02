@@ -27,4 +27,4 @@ This repo is the shared, version-controlled context for data work at Fora: defin
 
 `marketing`, `strategy`, `business-units`, `product`, `finance`, `product-operations`, `partners`, `leadership`, `international`, `other`.
 
-Each analysis lives at `analyses/<collection>/YYYY-MM-<short-slug>/` with a `README.md` following `templates/analysis.md`. If an analysis spans collections, put it in the primary one and list the others in its `collections` frontmatter.
+Each analysis lives at `analyses/<collection>/YYYY-MM-<short-slug>/` with a `README.md` following `templates/analysis.md`. Many analyses are Hex exports: the `*.hex.yaml` file holds every SQL, Python, and markdown cell in order (written findings are usually in the markdown cells). If an analysis spans collections, put it in the primary one and list the others in its `collections` frontmatter.
