@@ -11,7 +11,7 @@ This repo is the shared, version-controlled context for data work at Fora: defin
 | `context/data-sources/` | What lives in each system (warehouse, Amplitude, HubSpot, Omni, Hex) |
 | `context/tables/` | Per-table docs: grain, keys, joins, known issues |
 | `context/sql-snippets/` | Reusable joins and filters |
-| `skills/` | Step-by-step playbooks, one folder per skill, each with a `SKILL.md` |
+| `skills/` | Step-by-step playbooks, one folder per skill, each with a `SKILL.md`. Start with `skills/fora-data-context/` for any data question |
 | `analyses/<collection>/` | Completed analyses, grouped into collections |
 | `templates/` | Starting points for new metrics, analyses, and skills |
 
