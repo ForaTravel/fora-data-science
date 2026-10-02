@@ -142,4 +142,8 @@ Dimension table for advisor leads from Hubspot. Includes extensive derived field
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Grain: one row per advisor lead. `advisor_id` is populated once signed up.
+- `graded_date` only meaningful from 2024-03-20.
+- `is_high_quality_applicant` changed definition on 2026-03-11 (Final Rating P0/P1/P3 → Master Qualification Threshold High/VIP).
+- Two attribution systems: How-Heard (`attributed_channel_tier_*`) and Last-Click (`last_click_attributed_channel_tier_*`). Say which you used.
+- Application free text (`application_bio`, etc.) and names/emails are PII.

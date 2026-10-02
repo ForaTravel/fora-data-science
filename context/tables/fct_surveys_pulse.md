@@ -27,4 +27,7 @@ Responses from the recurring Advisor Pulse Survey (formerly known as the NPS sur
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- NPS from `likelihood_to_recommend_rating`; see `context/metrics/nps.md`.
+- Source switched to Intercom in late 2025; response volume and NPS level shifted at the same time.
+- Typeform responses before Oct 2025 have no advisor link and no ratings.
+- `qualitative_responses` is JSON with free-text answers.
