@@ -1,0 +1,6 @@
+{
+  "name": "fora-data-science",
+  "description": "Fora data science context layer: skills, metric definitions, and analysis library.",
+  "version": "0.1.0",
+  "author": { "name": "Fora Data Science" }
+}

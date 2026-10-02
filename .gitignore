@@ -1,0 +1,15 @@
+# Never commit raw data or secrets
+*.csv
+*.parquet
+*.xlsx
+*.json.gz
+data/
+.env
+*.pem
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+.ipynb_checkpoints/

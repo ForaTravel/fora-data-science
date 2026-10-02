@@ -1,0 +1,11 @@
+{
+  "name": "fora-data-science",
+  "owner": { "name": "Fora Data Science" },
+  "plugins": [
+    {
+      "name": "fora-data-science",
+      "source": "./",
+      "description": "Fora data science skills and context."
+    }
+  ]
+}

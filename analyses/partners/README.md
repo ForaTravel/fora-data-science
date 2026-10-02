@@ -1,0 +1,5 @@
+# Partners
+
+Supplier and partner performance and relationships.
+
+Each analysis gets its own folder: `YYYY-MM-<short-slug>/README.md` (see `templates/analysis.md`).
