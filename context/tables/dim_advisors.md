@@ -136,4 +136,6 @@ Key table aggregating most of what we know about advisors, such as their certifi
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Grain: one row per advisor. Usually filter `user_type = 'Community'`.
+- Contains PII (`full_name`, emails, location). Select IDs unless you truly need names, and never commit results containing them.
+- `activated_date` = first booking created. `has_path_to_pro_coach` + `path_to_pro_start_date` identify P2P coaching participants.

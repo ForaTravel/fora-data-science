@@ -73,4 +73,10 @@ Daily advisor activity snapshot built on a date spine from signup through today.
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Grain: one row per advisor per calendar date, from signup through today. Filter `calendar_date` before anything else; the table is large.
+- Default booking metrics **include canceled**; use `non_canceled_` columns otherwise. The `is_above_*_t365d` pillar flags are canceled-inclusive.
+- `certification` is estimated from history tables, not tracked exactly.
+- Replaces the deprecated `agg_advisor_facts_daily` (`date_day` → `calendar_date`).
+- For month-end snapshots: `where calendar_date = last_day(calendar_date, month)`.
+- **Best table for cohort analysis.** Use `calendar_days_after_signed_up`, `calendar_weeks_after_signed_up`, `calendar_months_after_signed_up`, or `calendar_quarters_after_signed_up` and filter `>= 0`. Avoid the `floored_*` versions: they turn negative values (days before signup) into 0, which piles pre-signup rows onto day 0.
+- `calendar_months_after_signed_up = 0` is M0 (calendar month), which differs from the 30-day buckets used in some older analyses.

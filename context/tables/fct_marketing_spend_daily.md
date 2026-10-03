@@ -32,4 +32,4 @@ Unified daily marketing spend across all paid channels, such as Meta (Facebook),
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Filter `is_test_spend = false` (or `coalesce(is_test_spend, false) = false`).

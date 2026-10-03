@@ -100,4 +100,5 @@ Trip are a contact's travel plan, from initial inquiry to confirmed booking. Tri
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- `supplier_type_anchor` priority: Cruise > DMC > Multiday Tours > Package > Homes/Villas > Hotel (non-canceled bookings only).
+- Join bookings on `trip_id`; a trip can have multiple clients, so filter to single-client trips when analyzing client behavior.

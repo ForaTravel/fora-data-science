@@ -53,4 +53,5 @@ Daily aggregate of growth funnel metrics by country and attribution channel. Met
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Grain: day × country × attribution channel. Filter `is_test_spend = false`.
+- Used for channel-level spend vs signups (MMM, price-volume-mix). For lead-level analysis use `dim_advisor_leads`.

@@ -182,4 +182,10 @@ Key table with the most important information about each Booking, which is made 
 
 ## Notes from analysts
 
-_Gotchas, common joins, and known issues. Hand-written; kept across syncs._
+- Grain: one row per booking.
+- Dates: `created_at` is when Fora received the booking (record created in Portal) and is the **default date for analysis**. `booked_date` is when the advisor actually made it, which can differ, especially for uploaded and self-reported bookings. `start_date`/`end_date` are travel dates.
+- `commissionable_booking_value_usd` **includes canceled** bookings. Whether to exclude them depends on the analysis (keep them for over-time and cohort comparisons); filter `is_canceled = false` to exclude. See `context/metrics/gmv.md`.
+- Pending/Failed bookings are already excluded upstream.
+- `is_archived` rows are usually excluded (`is_archived = false`) in past analyses.
+- Join to `dim_suppliers` on `supplier_id` for supplier type/brand; to `fct_trips` on `trip_id` for anchor type; to `fct_booking_attribution` on `booking_id` for Portal feature attribution (Client Portal, rebooking, deals, bookable quotes).
+- `advisor_t365d_*` and `*_when_booking_created` columns capture the advisor's state at booking time, which avoids a join to `agg_advisors_daily`.
