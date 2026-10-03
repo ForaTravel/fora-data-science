@@ -11,6 +11,7 @@ This repo is the shared, version-controlled context for data work at Fora: defin
 | `context/data-sources/` | What lives in each system (warehouse, Amplitude, HubSpot, Omni, Hex) |
 | `context/tables/` | Per-table docs: grain, keys, joins, known issues |
 | `context/sql-snippets/` | Reusable joins and filters |
+| `context/sql-style-guide.md` | How SQL is written at Fora |
 | `skills/` | Step-by-step playbooks, one folder per skill, each with a `SKILL.md`. Start with `skills/fora-data-context/` for any data question |
 | `analyses/<collection>/` | Completed analyses, grouped into collections |
 | `templates/` | Starting points for new metrics, analyses, and skills |
@@ -21,7 +22,9 @@ This repo is the shared, version-controlled context for data work at Fora: defin
 2. **Look for prior work.** Before starting an analysis, search `analyses/` for related questions.
 3. **Use the templates** in `templates/` when adding a metric, analysis, or skill.
 4. **No raw data.** Commit queries, aggregates, and findings only. Never commit row-level advisor, client, or booking data, credentials, or exports containing personal information.
-5. **Link to the source.** Analyses should link to the Hex project (or other tool) that produced them.
+5. **Write SQL in house style.** Follow `context/sql-style-guide.md` (Matt Mazur's guide plus Fora/BigQuery specifics) for every query you write or save.
+6. **Default to Community advisors.** Filter `user_type = 'Community'` unless the question is explicitly about HQ, test, or in-house users.
+7. **Link to the source.** Analyses should link to the Hex project (or other tool) that produced them.
 
 ## Analysis collections
 
